@@ -11,12 +11,17 @@
           </elementProp>
           <elementProp name="THREADS" elementType="Argument">
             <stringProp name="Argument.name">THREADS</stringProp>
-            <stringProp name="Argument.value">${__P(threads,20)}</stringProp>
+            <stringProp name="Argument.value">${__P(threads,10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="DURATION" elementType="Argument">
             <stringProp name="Argument.name">DURATION</stringProp>
-            <stringProp name="Argument.value">${__P(duration,1400)}</stringProp>
+            <stringProp name="Argument.value">${__P(duration,420)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="LOGMESSAGE" elementType="Argument">
+            <stringProp name="Argument.name">LOGMESSAGE</stringProp>
+            <stringProp name="Argument.value">${__log(__eval(${duration}*3),OUT)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -103,7 +108,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -141,65 +146,45 @@
       <hashTree/>
       <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
         <collectionProp name="load_profile">
-          <collectionProp name="1867461512">
+          <collectionProp name="26910560">
             <stringProp name="1">1</stringProp>
             <stringProp name="49">1</stringProp>
-            <stringProp name="48687">120</stringProp>
+            <stringProp name="60">60</stringProp>
           </collectionProp>
-          <collectionProp name="1925985420">
-            <stringProp name="53">5</stringProp>
-            <stringProp name="53">5</stringProp>
-            <stringProp name="48687">120</stringProp>
+          <collectionProp name="85321380">
+            <stringProp name="50">2</stringProp>
+            <stringProp name="50">2</stringProp>
+            <stringProp name="60">60</stringProp>
           </collectionProp>
-          <collectionProp name="1542636268">
-            <stringProp name="1567">10</stringProp>
-            <stringProp name="1567">10</stringProp>
-            <stringProp name="48687">120</stringProp>
+          <collectionProp name="85396772">
+            <stringProp name="52">4</stringProp>
+            <stringProp name="52">4</stringProp>
+            <stringProp name="60">60</stringProp>
           </collectionProp>
-          <collectionProp name="1543595532">
-            <stringProp name="1572">15</stringProp>
-            <stringProp name="1572">15</stringProp>
-            <stringProp name="48687">120</stringProp>
+          <collectionProp name="85547556">
+            <stringProp name="56">8</stringProp>
+            <stringProp name="56">8</stringProp>
+            <stringProp name="60">60</stringProp>
           </collectionProp>
-          <collectionProp name="1546117196">
-            <stringProp name="1598">20</stringProp>
-            <stringProp name="1598">20</stringProp>
-            <stringProp name="48687">120</stringProp>
+          <collectionProp name="-240955520">
+            <stringProp name="1573">16</stringProp>
+            <stringProp name="1573">16</stringProp>
+            <stringProp name="1722">60</stringProp>
           </collectionProp>
-          <collectionProp name="1570970764">
-            <stringProp name="1603">25</stringProp>
-            <stringProp name="1603">25</stringProp>
-            <stringProp name="48687">120</stringProp>
+          <collectionProp name="-266212348">
+            <stringProp name="1631">32</stringProp>
+            <stringProp name="1631">32</stringProp>
+            <stringProp reference="../../collectionProp[2]/stringProp[3]"/>
           </collectionProp>
-          <collectionProp name="1573492428">
-            <stringProp name="1629">30</stringProp>
-            <stringProp name="1629">30</stringProp>
-            <stringProp name="48687">120</stringProp>
-          </collectionProp>
-          <collectionProp name="1574451692">
-            <stringProp name="1634">35</stringProp>
-            <stringProp name="1634">35</stringProp>
-            <stringProp name="48687">120</stringProp>
-          </collectionProp>
-          <collectionProp name="1577744140">
-            <stringProp name="1660">40</stringProp>
-            <stringProp name="1660">40</stringProp>
-            <stringProp name="48687">120</stringProp>
-          </collectionProp>
-          <collectionProp name="1577932620">
-            <stringProp name="1665">45</stringProp>
-            <stringProp name="1665">45</stringProp>
-            <stringProp name="48687">120</stringProp>
-          </collectionProp>
-          <collectionProp name="1581225068">
-            <stringProp name="1691">50</stringProp>
-            <stringProp name="1691">50</stringProp>
-            <stringProp name="48687">120</stringProp>
+          <collectionProp name="-231799868">
+            <stringProp name="1726">64</stringProp>
+            <stringProp name="1726">64</stringProp>
+            <stringProp name="60">60</stringProp>
           </collectionProp>
         </collectionProp>
       </kg.apc.jmeter.timers.VariableThroughputTimer>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="false">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -243,7 +228,7 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="false">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -287,7 +272,7 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -323,7 +308,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.HitsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Hits per Second" enabled="false">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.HitsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Hits per Second" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -367,7 +352,7 @@
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.LatenciesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Latencies Over Time" enabled="false">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.LatenciesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Latencies Over Time" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
